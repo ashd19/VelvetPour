@@ -1,10 +1,15 @@
-import React from "react";
+import gsap from "gsap";
+import { ScrollTrigger, SplitText } from "gsap/all";
+
+
+gsap.registerPlugin(ScrollTrigger, SplitText);
 
 function App() {
   return (
-    <div className="flex justify-center items-center h-screen text-5xl font-extrabold text-red-600">
-      App
-    </div>
+    <>
+      <div className="flex-center h-[100vh] ">
+      </div>
+    </>
   );
 }
 
