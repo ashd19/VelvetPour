@@ -6,7 +6,13 @@ function Hero() {
   useGSAP(() => {
     const heroSplit = new SplitText(".title", { type: "chars, words" });
     const subtitleSplit = new SplitText(".title", { type: "lines " });
-    heroSplit.chars.forEach((char)=> char.classList.add('text-gradient'))
+    heroSplit.chars.forEach((char) => char.classList.add("text-gradient"));
+    gsap.from(heroSplit.chars, {
+      yPercent: 100,
+      duration: 2,
+      ease: "expo.out",
+      stagger: 0.08,
+    });
   }, []);
 
   return (
