@@ -6,7 +6,7 @@ gsap.registerPlugin(ScrollTrigger, SplitText);
 
 function Navbar() {
   return (
-    <nav className="bg-black/40 ">
+    <nav className="bg-black/40">
       <div >
         <a href="#home" className="flex b items-center gap-2">
           <img src="/images/logo.png" alt="logo" />
