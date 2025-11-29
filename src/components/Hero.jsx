@@ -22,25 +22,40 @@ function Hero() {
       opacity: 0,
       delay: 1,
     });
+
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: "#hero",
+          start: "top top",
+          end: "bottom top",
+          scrub: true,
+        },
+      })
+      .to(".left-leaf", { y: -200 }, 0)
+      .to(".right-leaf", { y: 200 }, 0);
   }, []);
 
   return (
     <>
-      <section className="relative  inset-0 size-full bg-[url('/images/noise.png')] relative z-10 min-h-dvh w-full  border border-transparent ">
+      <section
+        id="hero"
+        className="relative   inset-0 size-full bg-[url('/images/noise.png')] relative z-10 min-h-dvh w-full  border border-transparent "
+      >
         <h1 className="title md:mt-32 mt-40 md:text-[20vw] text-8xl leading-none font-modern-negra text-center ">
           MOJITO
         </h1>
         <img
           src="/images/hero-left-leaf.png"
           alt=""
-          className="absolute left-0 -bottom-20  md:w-fit w-1/3 md:top-20 md:bottom-auto "
+          className="left-leaf absolute left-0 -bottom-20  md:w-fit w-1/3 md:top-20 md:bottom-auto "
         />
         <img
           src="/images/hero-right-leaf.png"
           alt=""
-          className="absolute right-0  md:bottom-0 top-1/2 md:w-fit w-24"
+          className="right-leaf absolute right-0  md:bottom-0 top-1/2 md:w-fit w-24"
         />
-        <div className="body">
+        <div className="body ">
           <div className="flex px-10 w-full gap-10 justify-between items-center mx-auto ">
             <div className="space-y-5  hidden md:block">
               <p className="text-left">Cool. Crisp. Classic.</p>
