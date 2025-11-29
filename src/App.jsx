@@ -7,7 +7,7 @@ gsap.registerPlugin(ScrollTrigger, SplitText);
 function App() {
   return (
     <>
-      <div className="flex-center h-screen ">
+      <div >
         <Navbar />
       </div>
     </>
