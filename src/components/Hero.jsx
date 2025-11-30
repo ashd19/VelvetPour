@@ -45,7 +45,7 @@ function Hero() {
 
     let tl = gsap.timeline({
       scrollTrigger: {
-        trigger: "vid",
+        trigger: "video",
         start: startValue,
         end: endValue,
         scrub: true,
@@ -102,9 +102,9 @@ function Hero() {
         </div>
       </section>
       {/* absolute inset-0 but conflicting with bottom and.. 0  */}
-      <div className="video   ">
+      <div className="video absolute inset-0">
         <video
-          src="/videos/input.mp4"
+          src="/videos/output.mp4"
           muted
           playsInline
           preload="auto"
