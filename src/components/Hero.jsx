@@ -64,8 +64,7 @@ function Hero() {
     <>
       <section
         id="hero"
-        className="relative   inset-0 size-full bg-[url('/images/noise.png')] relative z-10 min-h-dvh w-full  border border-transparent "
-      >
+        className="relative   inset-0 size-full bg-[url('/images/noise.png')] relative z-10 min-h-dvh w-full  border border-transparent">
         <h1 className="title md:mt-32 mt-40 md:text-[20vw] text-8xl leading-none font-modern-negra text-center ">
           MOJITO
         </h1>
