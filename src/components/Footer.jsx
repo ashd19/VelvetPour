@@ -1,7 +1,8 @@
 import { storeInfo } from "../../constants";
 function Footer() {
-  return (
-    <div className="flex flex-col justify-center items-center w-full  h-screen  text-white bg-radial  from-pink-600 via-purple-700 to-blue-800">
+  return (     
+    // from-pink-600 via-purple-700 to-blue-800
+    <div className="flex flex-col justify-center items-center w-full  h-screen  text-white radial-gradient   from-pink-600 via-purple-700 to-blue-800">
       <h1 className="text-7xl" style={{}}>
         Velvet Pour
       </h1>
