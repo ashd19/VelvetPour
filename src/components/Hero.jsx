@@ -39,17 +39,27 @@ function Hero() {
       })
       .to(".left-leaf", { y: -200 }, 0)
       .to(".right-leaf", { y: 200 }, 0);
+
+    const startValue = isMobile ? "top 20%" : "center 60%";
+    const endValue = isMobile ? "120% top" : "bottom top";
+
+    let tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: "vid",
+        start: startValue,
+        end: endValue,
+        scrub: true,
+        pin: true,
+      },
+    });
+
+    videoRef.current.onloadedmetadata = () => {
+      tl.to(videoRef.current, {
+        currentTime: videoRef.current.duration,
+      });
+    };
   }, []);
 
-  const startValue = isMobile ? 'top 50%' : 'center 60%';
-  const endValue =   isMobile ? '120% top' : 'bottom top';
-
-
-  videoRef.current = gsap.timeline({
-    scrollTrigger: {
-      trigger:'video',
-      
-  })
   return (
     <>
       <section
@@ -91,8 +101,8 @@ function Hero() {
           </div>
         </div>
       </section>
-
-      <div className="video w-full md:h-[80%] h-1/2  bottom-0 left-0  absolute inset-0 md:object-contain object-bottom object-cover">
+      {/* absolute inset-0 but conflicting with bottom and.. 0  */}
+      <div className="video   ">
         <video
           src="/videos/input.mp4"
           muted
